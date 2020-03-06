@@ -6,14 +6,14 @@ namespace DnDLibrary
 {
     public class FiveEHelper
     {
-        public HttpClient ApiClient { get; set; }
+        public HttpClient _apiClient { get; set; }
 
         public void InitializeClient()
         {
-            ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri("http://www.dnd5eapi.co/api/");
-            ApiClient.DefaultRequestHeaders.Accept.Clear();
-            ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _apiClient = new HttpClient();
+            _apiClient.BaseAddress = new Uri("http://www.dnd5eapi.co/api/");
+            _apiClient.DefaultRequestHeaders.Accept.Clear();
+            _apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }
 }
